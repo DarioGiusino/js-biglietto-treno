@@ -51,4 +51,6 @@ if (userAge === underAge){
     defaultPrice = (defaultPrice - bigDiscount).toFixed(2);
 }
 // // console.log(defaultPrice);
+
+// stampo su pagina
 userFinalPrice.innerText = `€ ${defaultPrice}`;
