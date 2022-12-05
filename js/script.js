@@ -31,7 +31,9 @@ let defaultPrice = (travelKm * 0.21).toFixed(2);
 
 // sconti
 const littleDiscount = defaultPrice * 20 / 144;
+const underAge = userAge <= 18;
 const bigDiscount = defaultPrice * 40 / 144;
+const overAge = userAge >= 65;
 // // console.log(littleDiscount, bigDiscount);
 
 // !Validazione
@@ -43,12 +45,12 @@ if (isNaN(userAge)){
 if (isNaN(travelKm)){
     alert(`Per favore, inserisci un chilometraggio corretto`)
 }
-console.log(userAge, travelKm);
+// // console.log(userAge, travelKm);
 
 // calcoli utente minorenne/over 65
-if (userAge <= 18){
+if (userAge === underAge){
     defaultPrice = (defaultPrice - littleDiscount).toFixed(2);
-} else if (userAge >= 65){
+} else if (userAge === overAge){
     defaultPrice = (defaultPrice - bigDiscount).toFixed(2);
 }
 // // console.log(defaultPrice);
