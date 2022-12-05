@@ -28,12 +28,8 @@ const travelKm = parseInt(prompt(`Inserisci adesso i km che devi percorrere:`).t
 
 // !Validazione
 // età non valida
-if (isNaN(userAge)){
-    alert(`Per favore, inserisci un numero nel campo dell'età`)
-}
-// km non validi
-if (isNaN(travelKm)){
-    alert(`Per favore, inserisci un chilometraggio corretto`)
+if (isNaN(userAge) || isNaN(travelKm)){
+    alert(`Per favore, inserisci numeri validi`)
 }
 // // console.log(userAge, travelKm);
 
