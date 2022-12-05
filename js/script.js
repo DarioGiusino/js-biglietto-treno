@@ -24,7 +24,7 @@ se utente over 65
 const userFinalPrice = document.getElementById('default-price');
 const userAge = parseInt(prompt(`Inserisci la tua età:`).trim());
 const travelKm = parseInt(prompt(`Inserisci adesso i km che devi percorrere:`).trim());
-// // console.log(userAge, travelKm);
+console.log(userAge, travelKm);
 
 // !Validazione
 // età non valida
@@ -35,22 +35,22 @@ if (isNaN(userAge) || isNaN(travelKm)){
 
 // prezzo al km standard del biglietto
 let defaultPrice = (travelKm * 0.21).toFixed(2);
-// // console.log(defaultPrice);
+console.log(defaultPrice);
 
 // sconti relativi all'età
 const littleDiscount = defaultPrice * 20 / 144;
-const underAge = userAge <= 18;
+// const underAge = userAge <= 18;
 const bigDiscount = defaultPrice * 40 / 144;
-const overAge = userAge >= 65;
-// // console.log(littleDiscount, bigDiscount);
+// const overAge = userAge >= 65;
+console.log(littleDiscount, bigDiscount);
 
 // calcoli utente minorenne/over 65
-if (userAge === underAge){
+if (userAge <= 18){
     defaultPrice = (defaultPrice - littleDiscount).toFixed(2);
-} else if (userAge === overAge){
+} else if (userAge >= 65){
     defaultPrice = (defaultPrice - bigDiscount).toFixed(2);
 }
-// // console.log(defaultPrice);
+console.log(defaultPrice);
 
 // stampo su pagina
 userFinalPrice.innerText = `€ ${defaultPrice}`;
