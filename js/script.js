@@ -27,17 +27,17 @@ const travelKm = prompt(`Inserisci adesso i km che devi percorrere:`);
 
 // prezzo al km standard del biglietto
 let defaultPrice = travelKm * 0.21;
-console.log(defaultPrice);
+// // console.log(defaultPrice);
 
 // sconti
 const littleDiscount = defaultPrice * 20 / 144;
 const bigDiscount = defaultPrice * 40 / 144;
-console.log(littleDiscount, bigDiscount);
+// // console.log(littleDiscount, bigDiscount);
 
 // calcoli utente minorenne/over 65
 if (userAge <= 18){
-    defaultPrice = defaultPrice - littleDiscount;
+    defaultPrice = (defaultPrice - littleDiscount).toFixed(2);
 } else if (userAge >= 65){
-    defaultPrice = defaultPrice - bigDiscount;
+    defaultPrice = (defaultPrice - bigDiscount).toFixed(2);
 }
-console.log(defaultPrice);
+// // console.log(defaultPrice);
