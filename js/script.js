@@ -26,7 +26,7 @@ const travelKm = prompt(`Inserisci adesso i km che devi percorrere:`);
 // // console.log(userAge, travelKm);
 
 // prezzo al km standard del biglietto
-let defaultPrice = travelKm * 0.21;
+let defaultPrice = (travelKm * 0.21).toFixed(2);
 // // console.log(defaultPrice);
 
 // sconti
